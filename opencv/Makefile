@@ -1,0 +1,2 @@
+all:	test.c
+	gcc -DSYS_MACOSX -I/opt/local/include/opencv -I/opt/local/include -L/opt/local/lib/ -lopencv_highgui -lopencv_core  -lopencv_calib3d -lopencv_features2d -lopencv_flann -lopencv_gpu -lopencv_imgproc -lopencv_legacy -lopencv_ml -lopencv_video test.c -o test
