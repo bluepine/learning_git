@@ -7,7 +7,7 @@ public class HelloWorld {
     static Logger logger = Logger.getLogger(HelloWorld.class);
 
     public static void main(String[] args) {
-        BasicConfigurator.configure();
+	//       BasicConfigurator.configure();
         logger.info("Hello World");          // the old SysO-statement
     }
 }
