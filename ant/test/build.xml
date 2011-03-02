@@ -1,0 +1,14 @@
+<project>
+  <target name="buildAllJars">
+    <buildJar build.dir="tools"/>
+    <buildJar build.dir="module-A"/>
+    <buildJar build.dir="module-B"/>
+  </target>
+  <macrodef name="buildJar">
+    <attribute name="build.dir"/>
+    <sequential>
+      <echo message="lib/${build.dir}.jar"/>
+    </sequential>
+  </macrodef>
+</project>
+

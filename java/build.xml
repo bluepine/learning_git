@@ -1,0 +1,8 @@
+<project name="opencv_java" default="compile">
+  <path id="classpath">
+    <fileset dir="/opt/local/share/java/" includes="**/*.jar"/>
+  </path>
+  <target name="compile">
+    <javac srcdir="." destdir="." classpathref="classpath"/>
+  </target>
+</project>
