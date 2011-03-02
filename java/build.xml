@@ -1,8 +1,21 @@
-<project name="opencv_java" default="compile">
+<project name="opencv_java" default="run">
   <path id="classpath">
     <fileset dir="/opt/local/share/java/" includes="**/*.jar"/>
+    <pathelement path="."/>
   </path>
   <target name="compile">
     <javac srcdir="." destdir="." classpathref="classpath"/>
+  </target>
+  <target name="run" depends="compile">
+    <java fork="true" classname="TestRun">
+      <classpath>
+	<path refid="classpath"/>
+      </classpath>
+    </java>
+  </target>
+  <target name="clean">
+    <delete>
+      <fileset dir="." includes="*.class"/>
+    </delete>
   </target>
 </project>
